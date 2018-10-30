@@ -46,7 +46,7 @@ var initialization = async function() {
 			path: '/',
 			handler: function(request, reply)
 			{
-					return reply.view('embed-base', {});
+					return reply.view('base', {});
 			}
 	});
 

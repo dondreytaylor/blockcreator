@@ -1,1 +1,194 @@
-<h1>Landing</h1>
+<div id="wrapper" ng-controller="BlockEditor">
+
+  <!-- Pretty Block -->
+  <div id="blockeditor" class="sections">
+      <div class="section">
+        <h3>Block Header</h3>
+        <p>Provide the header part of the block.</p>
+
+        <!-- Block Header -->
+        <div class="fields">
+            <div class="field">
+                <label>Version</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Previous Block Hash</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Merkle Root</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Reserved</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Time</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Bits</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Nounce</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Solution Size</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Solution</label>
+                <input type="text">
+            </div>
+        </div>
+      </div>
+
+      <div class="section">
+         <h3>Block Transaction Count</h3>
+         <p>Provide the number transactions in this block.</p>
+         <div class="fields">
+             <div class="field">
+                 <label>Number of transactions</label>
+                 <input type="text">
+             </div>
+         </div>
+      </div>
+
+      <div class="section">
+          <h3>Block Transactions</h3>
+          <p>Create the transactions part of the block.</p>
+
+          <div class="groups">
+
+            <!-- Transactions -->
+            <div class="entries transactions">
+
+                <!-- Transaction -->
+                <div class="entry transaction">
+
+                  <div class="field">
+                      <label>Version<label>
+                      <input type="text">
+                  </div>
+
+                  <div class="field">
+                      <label>Flag</label>
+                      <input type="text">
+                  </div>
+
+                  <div class="field">
+                      <label>Input Count</label>
+                      <input type="text">
+                  </div>
+
+                  <!-- Input -->
+                  <div class="transaction-inputs">
+                    <div class="list transaction-input">
+                        <div class="fields">
+                          <div class="field">
+                              <label>Previous output</label>
+                              <input type="text">
+                          </div>
+                          <div class="field">
+                              <label>Script length</label>
+                              <input type="text">
+                          </div>
+                          <div class="field">
+                              <label>Signature Script</label>
+                              <input type="text">
+                          </div>
+                          <div class="field">
+                              <label>Sequence</label>
+                              <input type="text">
+                          </div>
+                        </div>
+                        <a onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove</a>
+                    </div>
+                  </div>
+                  <button ng-click="copyElement('.transaction-input', '.transaction-inputs')">Add Input</button>
+
+                  <div class="field">
+                      <label>Output Count</label>
+                      <input type="text">
+                  </div>
+
+                  <!-- Outputs -->
+                  <div class="transaction-outputs">
+                    <div class="list transaction-output">
+                        <div class="fields">
+                          <div class="field">
+                              <label>Transaction Value</label>
+                              <input type="text">
+                          </div>
+                          <div class="field">
+                              <label>Public Key Script length</label>
+                              <input type="text">
+                          </div>
+                          <div class="field">
+                              <label>Public Key Script</label>
+                              <input type="text">
+                          </div>
+                        </div>
+                        <a onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove</a>
+                    </div>
+                  </div>
+                  <button ng-click="copyElement('.transaction-output', '.transaction-outputs')">Add Output</button>
+
+                  <!-- Witnesses -->
+                  <div class="transaction-witnesses">
+                    <div class="list transaction-witness">
+                        <div class="field">
+                            <label>Stack Size</label>
+                            <input type="text">
+                        </div>
+                        <div class="group components">
+                            <div class="fields component">
+                                <div class="field">
+                                    <label>Component Length</label>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <label>Component Data</label>
+                                    <input type="text">
+                                </div>
+                                <a onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove</a>
+                            </div>
+                        </div>
+                        <button ng-click="copyElement('.component', '.components')">Add Component</button>
+                        <a onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove</a>
+                    </div>
+                  </div>
+                  <button ng-click="copyElement('.transaction-witness', '.transaction-witnesses')">Add Witness</button>
+
+                  <div class="field">
+                      <label>Lock Time</label>
+                      <input type="text">
+                  </div>
+
+                    <a onclick="this.parentNode.parentNode.removeChild(this.parentNode);">Remove Transaction</a>
+                </div>
+
+            </div>
+          </div>
+          <button ng-click="copyElement('.transaction', '.transactions', false)">Add Transaction</button>
+       </div>
+  </div>
+
+
+  <!-- Raw Block -->
+  <div id="blockpreview">
+      <div class="field">
+          <h3>Block Hash</h3>
+          <textarea ng-model="blockhash" id="blockhash" disabled></textarea>
+      </div>
+      <div class="field">
+          <h3>Raw Block</h3>
+          <textarea ng-model="rawblock" id="rawblock"></textarea>
+      </div>
+  </div>
+
+</div>

@@ -1,0 +1,88 @@
+#wrapper {
+  white-space: nowrap; }
+
+#blockeditor {
+  width: 50vw;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  overflow-y: auto;
+  background-color: #EEEEEE;
+  padding: 1rem 2rem 5rem 2rem;
+  box-sizing: border-box; }
+  #blockeditor input {
+    background-color: #333333;
+    outline: none;
+    border: navajowhite;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    display: block;
+    color: #FFFFFF;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap; }
+  #blockeditor h3 {
+    font-size: 1.5rem; }
+  #blockeditor button {
+    padding: 0.8rem 3rem;
+    margin: 0 0 2rem 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 0.5rem; }
+  #blockeditor .section {
+    margin-bottom: 3rem; }
+  #blockeditor .list {
+    background-color: #AAA;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #000;
+    padding: 1rem;
+    margin-bottom: 1rem; }
+  #blockeditor .entries .entry {
+    margin-bottom: 3rem;
+    background-color: #DDD;
+    padding: 1rem;
+    border: 0.1rem solid #000;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0; }
+  #blockeditor .field {
+    margin-bottom: 1rem;
+    max-width: 25rem;
+    width: 70%; }
+  #blockeditor a {
+    display: none;
+    color: #c80000;
+    cursor: pointer;
+    margin-bottom: 0.5rem; }
+  #blockeditor .removable > a {
+    display: block; }
+
+#blockpreview {
+  width: 50vw;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1rem 2rem 5rem 2rem; }
+  #blockpreview h3 {
+    font-size: 1.5rem; }
+  #blockpreview .field #blockhash {
+    width: 95%;
+    border: none;
+    background-color: #EEEEEE;
+    min-height: 5rem;
+    outline: none;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-wrap: break-word;
+    margin-bottom: 2rem; }
+  #blockpreview .field #rawblock {
+    width: 95%;
+    border: none;
+    background-color: #EEEEEE;
+    min-height: 20rem;
+    outline: none;
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow-wrap: break-word; }
